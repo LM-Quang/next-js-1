@@ -36,9 +36,12 @@ export function FavoritesContextProvider({ children }: FavoritesContextProviderP
    const [userFavorites, setUserFavorites] = useState<Meetup[]>([]);
 
    function addFavoritesHandler(favoritesMeetup: Meetup) {
+      // ===================== UPDATE STATE BASE ON PREVIOUS STATE =====================
       setUserFavorites((prevUserFavorites) => {
          return prevUserFavorites.concat(favoritesMeetup);
       });
+      // NOT THIS
+      // setUserFavorites([favoritesMeetup,...userFavorites])
    }
 
    function removeFavoritesHandler(meetupId: string) {

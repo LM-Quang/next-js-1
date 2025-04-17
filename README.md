@@ -1,4 +1,4 @@
-### `React Context` for State management
+### 1. `React Context` for State management
 
 -  Context is not store permernantly, when you reload the Webpage, the Context data will be cleared
 
@@ -6,23 +6,34 @@
 
 ```
 store
-└──favorites-context.tsx
+└─favorites-context.tsx
 ```
 
 2. Wrap all the Component that uses the context (layout.tsx)
 
 ```
 app
-└──react-context
-   └──layout.tsx
+└─react-context
+   └─layout.tsx
 ```
 
 3. Use the Context (2 files: page.tsx)
 
 ```
 app
-└──react-context
-   ├──page.tsx
-   └──favorites
-      └──page.tsx
+└─react-context
+   ├─layout.tsx
+   ├─page.tsx
+   └─favorites
+      └─page.tsx
+```
+
+### 2. `Dynamic Routes`
+
+```
+app
+└─dynamic-routes
+   ├─page.tsx
+   └─[routeName]
+      └─page.tsx
 ```

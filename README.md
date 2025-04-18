@@ -47,14 +47,58 @@ next-js/
 ```
 next-js/
    ├──app/
+   |  ├──community/
+   |  |  └──page.tsx
+   |  ├──meals/
+   |  |  ├──[mealSlug]/
+   |  |  |  └──page.tsx
+   |  |  ├──share/
+   |  |  |  └──page.tsx
+   |  |  ├──page.tsx
+   |  |  └──loading-out.tsx  => When only want that Loading state for a specific component
+   |  ├──layout.tsx
+   |  └──page.tsx
+   ├──components/
+   └──lib/  => This is for API call
+```
+
+### Note
+
+1. Try to split component into smaller component to seperare the `Server` component and `Client` component
+
+```
+next-js/
+   └──components/
+      └──main-header/
+         └──MainHeader.tsx
+```
+
+2. When using `Image` with `Unknown` dimensions, use the `fill` attribute.
+   [Read more](https://nextjs.org/docs/pages/api-reference/components/image#fill)
+
+```
+next-js/
+   └──components/
+      └──meals/
+         └──MealItem.tsx
+```
+
+3. Add `loading.tsx` to App folder to have a Loading state for the entire App when any component waits for calling API
+
+```
+next-js/
+   └──app/
       ├──layout.tsx
-      ├──page.tsx
-      ├──community/
-      |  └──page.tsx
+      ├──loading.tsx  => This is for showing Loading state when calling API
+      └──page.tsx
+```
+
+4. Add `loading-out.tsx` to a certain Page when you only want to apply Loading state to one Page
+
+```
+next-js/
+   └──app/
       └──meals/
          ├──page.tsx
-         ├──[mealSlug]/
-         |  └──page.tsx
-         └──share/
-            └──page.tsx
+         └──loading-out.tsx  => When only want that Loading state for a specific component
 ```

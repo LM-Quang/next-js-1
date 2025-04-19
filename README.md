@@ -211,3 +211,9 @@ next-js/
    └──lib/
       └──actions.ts
 ```
+
+### 15. Read about `Static Asset` optimization
+
+[Read more](https://nextjs.org/docs/app/building-your-application/optimizing/static-assets)
+
+\*\* Note: You should store Files via some cloud file storage like AWS S3

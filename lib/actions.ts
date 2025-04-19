@@ -3,6 +3,7 @@
 import { Meal } from "@/type/Meal";
 import { saveMeal } from "./meals";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 const isInvalidText = (text: string) => {
    return !text || text.trim() === "";
@@ -50,5 +51,7 @@ export const shareMeal = async (
    };
 
    await saveMeal(meal, image);
+   // Tell next to revalidat the Cache of a certain route path
+   revalidatePath("/meals", "layout");
    redirect("/meals");
 };

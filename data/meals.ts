@@ -2,7 +2,7 @@ import { Meal } from "@/type/Meal";
 
 export const dummyMeals: Meal[] = [
    {
-      id: 1,
+      id: 0,
       title: "Juicy Cheese Burger",
       slug: "juicy-cheese-burger",
       image: "/images/burger.jpg",
@@ -25,7 +25,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "johndoe@example.com",
    },
    {
-      id: 2,
+      id: 1,
       title: "Spicy Curry",
       slug: "spicy-curry",
       image: "/images/curry.jpg",
@@ -50,7 +50,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "max@example.com",
    },
    {
-      id: 3,
+      id: 2,
       title: "Homemade Dumplings",
       slug: "homemade-dumplings",
       image: "/images/dumplings.jpg",
@@ -72,7 +72,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "emilychen@example.com",
    },
    {
-      id: 4,
+      id: 3,
       title: "Classic Mac n Cheese",
       slug: "classic-mac-n-cheese",
       image: "/images/macncheese.jpg",
@@ -97,7 +97,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "laurasmith@example.com",
    },
    {
-      id: 5,
+      id: 4,
       title: "Authentic Pizza",
       slug: "authentic-pizza",
       image: "/images/pizza.jpg",
@@ -119,7 +119,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "mariorossi@example.com",
    },
    {
-      id: 6,
+      id: 5,
       title: "Wiener Schnitzel",
       slug: "wiener-schnitzel",
       image: "/images/schnitzel.jpg",
@@ -141,7 +141,7 @@ export const dummyMeals: Meal[] = [
       creator_email: "franzhuber@example.com",
    },
    {
-      id: 7,
+      id: 6,
       title: "Fresh Tomato Salad",
       slug: "fresh-tomato-salad",
       image: "/images/tomato-salad.jpg",

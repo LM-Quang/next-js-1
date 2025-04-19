@@ -35,6 +35,7 @@ const MealDetailsPage = () => {
             <p
                className={classes.instructions}
                dangerouslySetInnerHTML={{
+                  // Store this as HTML => Could be XSS actack here
                   __html: meal.instructions,
                }}
             ></p>

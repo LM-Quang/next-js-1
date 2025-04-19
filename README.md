@@ -148,3 +148,42 @@ next-js/
       └──meals/
          └──ImagePicker.tsx
 ```
+
+### 12. Using `Server Actions` for Handling Form submissions
+
+```
+next-js/
+   ├──app/
+   |  └──meals/
+   |     └──share/
+   |        └──page.tsx
+   └──lib/
+      └──actions.ts
+```
+
+\*\* Note. Add these `Dependency`
+
+```bash
+npm install slugify
+npm install xss
+```
+
+1. `Slugify` to Slugify a string. Useful for URLs, filenames, and IDs
+
+```
+next-js/
+   └──lib/
+      └──actions.ts
+```
+
+2. XSS (A module used to filter input from users to prevent XSS attacks)
+
+```
+next-js/
+   ├──app/
+   |  └──meals/
+   |     └──[mealSlug]/
+   |        └──page.tsx
+   └──lib/
+      └──actions.ts
+```

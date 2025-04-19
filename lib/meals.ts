@@ -5,3 +5,9 @@ export const getMeals = async () => {
    await new Promise((resolve) => setTimeout(resolve, 2000));
    return dummyMeals;
 };
+
+export const getMealsError = async () => {
+   await new Promise((resolve) => setTimeout(resolve, 1000));
+   // To simulate Error
+   throw new Error("Simulate error happens during calling API");
+};

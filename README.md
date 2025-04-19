@@ -62,9 +62,9 @@ next-js/
    └──lib/  => This is for API call
 ```
 
-### Note
+### 4. `Server Side` component and `Client Side` component
 
-1. Try to split component into smaller component to seperare the `Server` component and `Client` component
+Try to split component into smaller component to seperare the `Server` component and `Client` component
 
 ```
 next-js/
@@ -73,8 +73,10 @@ next-js/
          └──MainHeader.tsx
 ```
 
-2. When using `Image` with `Unknown` dimensions, use the `fill` attribute.
-   [Read more](https://nextjs.org/docs/pages/api-reference/components/image#fill)
+### 5. `Image` with `Unknown` dimensions
+
+When using `Image` with `Unknown` dimensions, use the `fill` attribute.
+[Read more](https://nextjs.org/docs/pages/api-reference/components/image#fill)
 
 ```
 next-js/
@@ -83,7 +85,9 @@ next-js/
          └──MealItem.tsx
 ```
 
-3. Add `loading.tsx` to App folder to have a Loading state for the entire App when any component waits for calling API
+### 6. Handle `Loading` state
+
+1. Add `loading.tsx` to App folder to have a Loading state for the entire App when any component waits for calling API
 
 ```
 next-js/
@@ -93,7 +97,7 @@ next-js/
       └──page.tsx
 ```
 
-4. Add `loading-out.tsx` to a certain Page when you only want to apply Loading state to one Page
+2. Add `loading-out.tsx` to a certain Page when you only want to apply Loading state to one Page
 
 ```
 next-js/
@@ -101,4 +105,24 @@ next-js/
       └──meals/
          ├──page.tsx
          └──loading-out.tsx  => When only want that Loading state for a specific component
+```
+
+### 7. Handle `Error` (Similar to `Loading`)
+
+```
+next-js/
+   └──app/
+      └──meals/
+         ├──page.tsx
+         └──error.tsx  => When only want that Error for a specific component
+```
+
+### 8. Handle `Not Found`
+
+```
+next-js/
+   └──app/
+      ├──layout.tsx
+      ├──not-found.tsx
+      └──page.tsx
 ```

@@ -126,3 +126,13 @@ next-js/
       ├──not-found.tsx
       └──page.tsx
 ```
+
+### 9. `useParams` to get Parameter from Dynamic URL, `notFound` method from Next JS
+
+```
+next-js/
+   └──components/
+      └──meals/
+         └──[mealSlug]/
+            └──page.tsx
+```

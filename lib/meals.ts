@@ -11,3 +11,8 @@ export const getMealsError = async () => {
    // To simulate Error
    throw new Error("Simulate error happens during calling API");
 };
+
+export const getMeal = (slug: string) => {
+   const index = dummyMeals.findIndex((meal) => meal.slug === slug);
+   return index === -1 ? null : dummyMeals[index];
+};

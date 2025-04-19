@@ -187,3 +187,27 @@ next-js/
    └──lib/
       └──actions.ts
 ```
+
+### 13. `useFormStatus` hooks when submitting a form for `Better User Experience`
+
+```
+next-js/
+   ├──app/
+   |  └──meals/
+   |     └──share/
+   |        └──page.tsx
+   ├──components/
+      └──MealsFormSubmission.tsx
+```
+
+### 14. Input Validation
+
+```
+next-js/
+   ├──app/
+   |  └──meals/
+   |     └──share/
+   |        └──page.tsx
+   └──lib/
+      └──actions.ts
+```

@@ -1,3 +1,5 @@
+"use client";
+
 import ImagePicker from "@/components/meals/ImagePicker";
 import classes from "./page.module.css";
 
@@ -5,8 +7,14 @@ import classes from "./page.module.css";
    /* Calling Sever Action here */
 }
 import { shareMeal } from "@/lib/actions";
+import MealsFormSubmission from "@/components/meals/MealsFormSubmission";
+import { useActionState } from "react";
+
+type ShareMealState = { message: string };
 
 export default function ShareMealPage() {
+   // Input validation
+   const [state, formAction] = useActionState<ShareMealState, FormData>(shareMeal, { message: "" });
    return (
       <>
          <header className={classes.header}>
@@ -16,8 +24,9 @@ export default function ShareMealPage() {
             <p>Or any other meal you feel needs sharing!</p>
          </header>
          <main className={classes.main}>
-            {/* Using Sever Action here */}
-            <form className={classes.form} action={shareMeal}>
+            {/* Using Sever Action here: action={shareMeal} */}
+            {/* Change to action={formAction}, to work with input validation */}
+            <form className={classes.form} action={formAction}>
                <div className={classes.row}>
                   <p>
                      <label htmlFor="name">Your name</label>
@@ -43,8 +52,12 @@ export default function ShareMealPage() {
 
                <ImagePicker label="image" name="image" />
 
+               {/* Input validation */}
+               {/* The message will show up when input is invalid */}
+               {state.message && <p>{state.message}</p>}
+
                <p className={classes.actions}>
-                  <button type="submit">Share Meal</button>
+                  <MealsFormSubmission />
                </p>
             </form>
          </main>

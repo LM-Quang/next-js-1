@@ -73,9 +73,8 @@ next-js/
          └──MainHeader.tsx
 ```
 
-### 5. `Image` with `Unknown` dimensions
+### 5. `Image` with `Unknown` dimensions, use the `fill` attribute
 
-When using `Image` with `Unknown` dimensions, use the `fill` attribute.
 [Read more](https://nextjs.org/docs/pages/api-reference/components/image#fill)
 
 ```
@@ -127,12 +126,25 @@ next-js/
       └──page.tsx
 ```
 
-### 9. `useParams` to get Parameter from Dynamic URL, `notFound` method from Next JS
+### 9. `useParams` Hook to get Parameter from Dynamic URL, `notFound` method from Next JS
+
+(Read more)[https://nextjs.org/docs/app/api-reference/functions/use-params]
+
+```
+next-js/
+   └──app/
+      └──meals/
+         └──[mealSlug]/
+            └──page.tsx
+```
+
+### 10. `useRef` Hook and upload Image file
+
+(Read more)[https://dev.to/kirubelkinfe/mastering-useref-in-react-with-typescript-4-different-use-cases-for-useref-2a87]
 
 ```
 next-js/
    └──components/
       └──meals/
-         └──[mealSlug]/
-            └──page.tsx
+         └──ImagePicker.tsx
 ```

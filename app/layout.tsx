@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MainHeader from "@/components/main-header/MainHeader";
 
+// Add Metadata to a Layout, it will automatically be added to all the pages wrapped by this layout
+// unless a page specifies it's own Metadata
 export const metadata: Metadata = {
-   title: "Learning Next JS",
-   description: "Learning Next JS",
+   title: "Static Metadata",
+   description: "Whole website",
 };
 
 export default function RootLayout({

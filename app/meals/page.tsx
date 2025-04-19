@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import React, { Suspense } from "react";
 import classes from "./page.module.css";
 import Link from "next/link";
 import MealsGrid from "@/components/meals/MealsGrid";
 import { getMeals } from "@/lib/meals";
 import MealsLoadingPage from "./loading-out";
+
+export const metadata: Metadata = {
+   title: "Static Metadata",
+   description: "Meals page",
+};
 
 const Meals = async () => {
    const meals = await getMeals();

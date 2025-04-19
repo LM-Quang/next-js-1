@@ -6,6 +6,20 @@ import Image from "next/image";
 import { getMeal } from "@/lib/meals";
 import { notFound, useParams } from "next/navigation";
 
+// Dynamic metadata
+export async function generateMetadata({ params }: { params: { mealSlug: string } }) {
+   const meal = getMeal(params.mealSlug);
+
+   if (!meal) {
+      notFound();
+   }
+
+   return {
+      title: meal.title,
+      description: meal.summary,
+   };
+}
+
 const MealDetailsPage = () => {
    const params = useParams<{ mealSlug: string }>();
    const meal = getMeal(params.mealSlug);

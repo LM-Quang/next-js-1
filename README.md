@@ -217,3 +217,26 @@ next-js/
 [Read more](https://nextjs.org/docs/app/building-your-application/optimizing/static-assets)
 
 \*\* Note: You should store Files via some cloud file storage like AWS S3
+
+### 16. Add `Metadata` to improve SEO
+
+[Read more](https://nextjs.org/docs/app/api-reference/functions/generate-metadata)
+
+1. Static Metadata
+
+```
+next-js/
+   ├──app/
+   |  └──meals/
+   |     └──page.tsx
+   └──layout.tsx
+```
+
+2. Dynamic Metadata
+
+```
+next-js/
+   └──app/
+      └──[mealslug]/
+         └──page.tsx
+```
